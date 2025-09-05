@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clark Academy of Performing Arts</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'brand-purple': '#4A0072',
+                        'brand-dark': '#0B0B3A',
+                        'brand-light': '#F3E8FF',
+                        'brand-accent': '#C0C0C0',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-50 font-sans text-brand-dark">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2 nav-button" data-page="home">
+                    <!-- Placeholder for the actual logo image -->
+                     <div class="w-12 h-12 bg-brand-purple rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.333 21.333a2.667 2.667 0 100-5.333 2.667 2.667 0 000 5.333zm13.334-8a2.667 2.667 0 100-5.333 2.667 2.667 0 000 5.333zm-6.667-1.333a2.667 2.667 0 100-5.333 2.667 2.667 0 000 5.333zM5.333 8a2.667 2.667 0 100-5.333A2.667 2.667 0 005.333 8z"></path></svg>
+                    </div>
+                    <span class="font-serif text-xl font-bold text-brand-dark">Clark Academy</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8" id="desktop-nav">
+                    <a href="#" class="nav-link active text-gray-600 hover:text-brand-purple transition-colors duration-300" data-page="home">Home</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-brand-purple transition-colors duration-300" data-page="about">About Us</a>
+                    <a href="https://your-shop-url.com" target="_blank" class="text-gray-600 hover:text-brand-purple transition-colors duration-300">Shop</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-brand-purple transition-colors duration-300" data-page="blog">Blog</a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-brand-purple transition-colors duration-300" data-page="contact">Contact Us</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                     <!-- Register Button -->
+                    <a href="#" class="hidden sm:inline-block nav-button bg-brand-purple text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors duration-300 shadow" data-page="signup">
+                        Register Now
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-purple">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="nav-link-mobile active block px-3 py-2 rounded-md text-base font-medium text-brand-purple bg-brand-light" data-page="home">Home</a>
+                <a href="#" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple" data-page="about">About Us</a>
+                <a href="https://your-shop-url.com" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple">Shop</a>
+                <a href="#" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple" data-page="blog">Blog</a>
+                <a href="#" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple" data-page="contact">Contact Us</a>
+                 <a href="#" class="nav-link-mobile block w-full text-left mt-2 px-3 py-2.5 rounded-md text-base font-medium bg-brand-purple text-white hover:bg-opacity-90" data-page="signup">Register Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Each section is a "page" -->
+        
+        <!-- HOME PAGE SECTION -->
+        <section id="home" class="page-section">
+            <!-- Hero Section -->
+            <div class="relative bg-brand-light overflow-hidden">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+                    <div class="text-center">
+                        <h1 class="font-serif text-4xl md:text-6xl font-extrabold text-brand-dark tracking-tight">
+                            We don't just reach for the stars,
+                            <span class="block text-brand-purple">We Make Them.</span>
+                        </h1>
+                        <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-600">
+                            Join a family where passion meets purpose. At Clark Academy, we transform potential into performance, nurturing the next generation of world-class dancers under the guidance of a true living legend.
+                        </p>
+                        <div class="mt-8 flex justify-center gap-4">
+                            <a href="#" data-page="signup" class="nav-button inline-block bg-brand-purple text-white px-8 py-3 rounded-lg text-base font-semibold hover:bg-opacity-90 transition-transform duration-300 hover:scale-105 shadow-lg">
+                                Register Today
+                            </a>
+                            <a href="#" data-page="about" class="nav-button inline-block bg-white text-brand-purple px-8 py-3 rounded-lg text-base font-semibold hover:bg-gray-100 transition-transform duration-300 hover:scale-105 shadow-lg">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="py-16 sm:py-24 bg-white">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-center text-brand-dark">The Benefits of Dance</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-center text-gray-600">More than just movement, dance is a powerful tool for growth, confidence, and lifelong skills.</p>
+                    <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-semibold text-lg text-brand-dark">Enhanced Brain Power</h3>
+                            <p class="mt-2 text-gray-600">Remembering steps and focusing on rhythm is a fantastic exercise for the brain, improving concentration and academic performance.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-semibold text-lg text-brand-dark">Emotional Well-being</h3>
+                            <p class="mt-2 text-gray-600">Dancing releases endorphins, the "feel-good" chemicals that can help ward off depression and anxiety.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-semibold text-lg text-brand-dark">Physical Health</h3>
+                            <p class="mt-2 text-gray-600">Improve flexibility, posture, and weight management in a fun, active environment that's accessible to everyone.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-semibold text-lg text-brand-dark">Life Skills & Perseverance</h3>
+                            <p class="mt-2 text-gray-600">Dance fosters perseverance as students learn from mistakes, strengthen sensory awareness, and interpret body language.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-semibold text-lg text-brand-dark">A Nurturing Community</h3>
+                            <p class="mt-2 text-gray-600">We provide a "dance home" where students feel supported by teachers and peers, building friendships that last a lifetime.</p>
+                        </div>
+                         <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-semibold text-lg text-brand-dark">World-Class Training</h3>
+                            <p class="mt-2 text-gray-600">Learn from instructors who have trained champions and performed on the world's biggest stages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Testimonial Section -->
+            <div class="bg-brand-light py-16 sm:py-24">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                     <blockquote class="max-w-4xl mx-auto">
+                        <p class="font-serif text-3xl md:text-4xl font-bold text-brand-dark">"Fabulous footwork and choreography."</p>
+                        <footer class="mt-4 text-xl font-medium text-gray-600">- Gregory Hines, Broadway Icon & Tap Dance Legend</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US PAGE SECTION -->
+        <section id="about" class="page-section hidden">
+            <div class="bg-white py-16 sm:py-24">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="text-center">
+                            <p class="text-base font-semibold text-brand-purple">Our Founder</p>
+                            <h2 class="mt-2 font-serif text-4xl md:text-5xl font-extrabold text-brand-dark">Matthew Clark</h2>
+                            <p class="mt-4 text-lg text-gray-600">A World-Renowned Dancer, Choreographer, and Mentor</p>
+                        </div>
+                        
+                        <div class="mt-12 text-gray-700 space-y-8">
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-brand-dark">A Legacy of Excellence</h3>
+                                <p class="mt-4 text-lg leading-relaxed">Matthew Clark's journey is one of sustained artistic excellence and international acclaim. From his debut as a "brilliant young tap dancer" at the 1991 IDO World Tap Dance Championship to receiving New York's prestigious "Living Legend Award 'Life as an Artist'," his career is a testament to his dedication. His profound influence is recognized through inductions into The Canadian Dance Hall of Fame and the Dance Teachers Hall of Fame, and commendations from President Bill Clinton for his contributions to the arts.</p>
+                            </div>
+
+                            <div class="bg-brand-light p-8 rounded-lg">
+                                <blockquote class="text-center">
+                                    <p class="text-xl font-medium italic text-brand-dark">The ultimate artistic endorsement came from the legendary Gregory Hines, who lauded Matthew's work as "Fabulous footwork and choreography."</p>
+                                </blockquote>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-brand-dark">Architect of Champions</h3>
+                                <p class="mt-4 text-lg leading-relaxed">Matthew's genius extends beyond his own performance to his incredible ability to cultivate success in others. As the coach and choreographer for both the US and Canadian National Teams, he has led his students to an astounding 21 World Tap Dance Championship titles. His proven record of producing results at the highest levels of international competition makes him one of the most sought-after instructors in the world.</p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-brand-dark">A Philosophy of Mentorship</h3>
+                                <p class="mt-4 text-lg leading-relaxed">Beyond the trophies and accolades, Matthew is committed to creating a "dance home"—a nurturing and supportive environment where students can thrive. His teaching philosophy centers on using dance as a vehicle to build confidence, unlock potential, and foster personal growth. This commitment to developing the whole person is at the heart of Clark Academy, where every student is encouraged to become not only a great dancer but a great individual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG PAGE SECTION -->
+        <section id="blog" class="page-section hidden">
+            <div class="bg-white py-16 sm:py-24">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <h2 class="font-serif text-4xl md:text-5xl font-extrabold text-brand-dark">From Our Blog</h2>
+                        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">Insights, stories, and news from the Clark Academy family.</p>
+                    </div>
+
+                    <div class="mt-12 max-w-lg mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none">
+                        <!-- Blog Post 1 -->
+                        <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                            <div class="flex-shrink-0">
+                                <img class="h-48 w-full object-cover" src="https://placehold.co/600x400/F3E8FF/4A0072?text=Dance+Life" alt="Dancers practicing">
+                            </div>
+                            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-brand-purple">Technique & Training</p>
+                                    <a href="#" class="block mt-2">
+                                        <p class="text-xl font-semibold text-brand-dark">5 Tips for Nailing Your Audition</p>
+                                        <p class="mt-3 text-base text-gray-500">Confidence is key, but preparation is everything. Here are five practical tips from our top instructors to help you shine in your next audition.</p>
+                                    </a>
+                                </div>
+                                <div class="mt-6 flex items-center">
+                                    <div class="ml-3">
+                                        <p class="text-sm font-medium text-gray-900">By Matthew Clark</p>
+                                        <div class="flex space-x-1 text-sm text-gray-500">
+                                            <time datetime="2025-09-05">September 5, 2025</time>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blog Post 2 -->
+                        <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                            <div class="flex-shrink-0">
+                                <img class="h-48 w-full object-cover" src="https://placehold.co/600x400/4A0072/FFFFFF?text=Community" alt="Community event">
+                            </div>
+                            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-brand-purple">Community Spotlight</p>
+                                    <a href="#" class="block mt-2">
+                                        <p class="text-xl font-semibold text-brand-dark">How Dance Builds Lifelong Friendships</p>
+                                        <p class="mt-3 text-base text-gray-500">The studio is more than just a place to learn; it's where bonds are formed. We explore the powerful connection between dance and community.</p>
+                                    </a>
+                                </div>
+                                <div class="mt-6 flex items-center">
+                                    <div class="ml-3">
+                                        <p class="text-sm font-medium text-gray-900">By Academy Staff</p>
+                                        <div class="flex space-x-1 text-sm text-gray-500">
+                                            <time datetime="2025-08-28">August 28, 2025</time>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blog Post 3 -->
+                        <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                            <div class="flex-shrink-0">
+                                <img class="h-48 w-full object-cover" src="https://placehold.co/600x400/0B0B3A/FFFFFF?text=Inspiration" alt="Inspirational quote">
+                            </div>
+                            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-brand-purple">Inspiration</p>
+                                    <a href="#" class="block mt-2">
+                                        <p class="text-xl font-semibold text-brand-dark">The Power of Perseverance in Dance</p>
+                                        <p class="mt-3 text-base text-gray-500">Every great dancer has faced challenges. This post celebrates the resilience and dedication that define our students and our art form.</p>
+                                    </a>
+                                </div>
+                                <div class="mt-6 flex items-center">
+                                     <div class="ml-3">
+                                        <p class="text-sm font-medium text-gray-900">By Matthew Clark</p>
+                                        <div class="flex space-x-1 text-sm text-gray-500">
+                                            <time datetime="2025-08-15">August 15, 2025</time>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT US PAGE SECTION -->
+        <section id="contact" class="page-section hidden">
+            <div class="bg-white py-16 sm:py-24">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                     <div class="text-center">
+                        <h2 class="font-serif text-4xl md:text-5xl font-extrabold text-brand-dark">Get In Touch</h2>
+                        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">We'd love to hear from you. Reach out with any questions or to start your dance journey.</p>
+                    </div>
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <div class="bg-gray-50 p-8 rounded-lg">
+                            <form action="#" method="POST">
+                                <div class="space-y-6">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                        <input type="text" name="name" id="name" autocomplete="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-purple focus:border-brand-purple sm:text-sm">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                        <input type="email" name="email" id="email" autocomplete="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-purple focus:border-brand-purple sm:text-sm">
+                                    </div>
+                                    <div>
+                                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-purple focus:border-brand-purple sm:text-sm"></textarea>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-brand-purple hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-purple">
+                                            Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Contact Details -->
+                        <div class="flex flex-col justify-center">
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 bg-brand-light rounded-lg flex items-center justify-center">
+                                        <svg class="h-6 w-6 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-semibold text-brand-dark">Address</h3>
+                                        <p class="text-gray-600">123 Main St, Anytown, USA 14207</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 bg-brand-light rounded-lg flex items-center justify-center">
+                                       <svg class="h-6 w-6 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-semibold text-brand-dark">Email</h3>
+                                        <p class="text-gray-600">hello@clarkacademy.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 h-10 w-10 bg-brand-light rounded-lg flex items-center justify-center">
+                                       <svg class="h-6 w-6 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-semibold text-brand-dark">Phone</h3>
+                                        <p class="text-gray-600">(555) 123-4567</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIGN UP PAGE SECTION -->
+        <section id="signup" class="page-section hidden">
+            <div class="min-h-screen bg-brand-light flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-lg">
+                    <div>
+                        <h2 class="mt-6 text-center text-3xl font-serif font-extrabold text-brand-dark">
+                            Create Your Account
+                        </h2>
+                        <p class="mt-2 text-center text-sm text-gray-600">
+                            And start your dance journey with us today!
+                        </p>
+                    </div>
+                    <form class="mt-8 space-y-6" action="#" method="POST">
+                        <input type="hidden" name="remember" value="true">
+                        <div class="rounded-md shadow-sm -space-y-px">
+                            <div class="grid grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="first-name" class="sr-only">First Name</label>
+                                    <input id="first-name" name="first-name" type="text" required class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-brand-purple focus:border-brand-purple focus:z-10 sm:text-sm" placeholder="First Name">
+                                </div>
+                                <div>
+                                    <label for="last-name" class="sr-only">Last Name</label>
+                                    <input id="last-name" name="last-name" type="text" required class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-brand-purple focus:border-brand-purple focus:z-10 sm:text-sm" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email-address" class="sr-only">Email address</label>
+                                <input id="email-address" name="email" type="email" autocomplete="email" required class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-brand-purple focus:border-brand-purple focus:z-10 sm:text-sm" placeholder="Email address">
+                            </div>
+                             <div class="mt-4">
+                                <label for="password" class="sr-only">Password</label>
+                                <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-brand-purple focus:border-brand-purple focus:z-10 sm:text-sm" placeholder="Password">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-brand-purple hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-purple">
+                                Create Account
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white">
+        <div class="container mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Clark Academy of Performing Arts. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
