@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clark Academy of Performing Arts - Registration</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'brand-purple': '#4A0072',
+                        'brand-dark': '#0B0B3A',
+                        'brand-light': '#F3E8FF',
+                        'brand-accent': '#C0C0C0',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link.active {
+            color: #4A0072;
+            font-weight: 600;
+            position: relative;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #4A0072;
+        }
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-brand-dark">
+
+    <!-- Header and Navigation (copied from index.html for consistency) -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2 nav-button">
+                    <img src="https://cdn11.bigcommerce.com/s-6dmaxdsjqa/images/stencil/original/image-manager/capa-icon-master.png?t=1757343850" alt="Clark Academy Icon" class="w-10 h-10 md:w-12 md:h-12 object-contain" style="max-width:48px;max-height:48px;">
+                    <img src="https://cdn11.bigcommerce.com/s-6dmaxdsjqa/images/stencil/original/image-manager/capa-logo.jpg?t=1757343849" alt="Clark Academy Logo" class="h-8 md:h-10 object-contain" style="max-height:40px;">
+                </a>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8" id="desktop-nav">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-brand-purple transition-colors duration-300">Home</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-brand-purple transition-colors duration-300">About Us</a>
+                    <a href="https://shopsbyfar.com/capa/" target="_blank" class="text-gray-600 hover:text-brand-purple transition-colors duration-300">Shop</a>
+                    <a href="blog.html" class="nav-link text-gray-600 hover:text-brand-purple transition-colors duration-300">Blog</a>
+                    <a href="contact.html" class="nav-link text-gray-600 hover:text-brand-purple transition-colors duration-300">Contact Us</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <a href="registration.html" class="hidden sm:inline-block nav-button bg-brand-purple text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors duration-300 shadow">
+                        Register Now
+                    </a>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-purple">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-brand-purple bg-brand-light" >Home</a>
+                <a href="about.html" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple">About Us</a>
+                <a href="https://shopsbyfar.com/capa/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple">Shop</a>
+                <a href="blog.html" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple">Blog</a>
+                <a href="contact.html" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple">Contact Us</a>
+                <a href="registration.html" class="nav-link-mobile block w-full text-left mt-2 px-3 py-2.5 rounded-md text-base font-medium bg-brand-purple text-white hover:bg-opacity-90">Register Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-28 pb-10">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-serif font-extrabold text-center mb-4 text-brand-dark">Registration</h1>
+            <p class="text-center text-lg text-gray-600 mb-10">Create your account to get started.</p>
+
+            <form action="#" method="POST" id="registration-form">
+                <!-- Step 1: Family Information -->
+                <section class="form-section">
+                    <h2 class="form-section-title font-serif text-brand-purple">Step 1: Family Information</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="family-last-name" class="form-label">Family Last Name</label>
+                            <input type="text" id="family-last-name" name="family_last_name" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="primary-contact-first-name" class="form-label">Primary Contact First Name</label>
+                            <input type="text" id="primary-contact-first-name" name="primary_contact_first_name" class="form-input" required>
+                        </div>
+                         <div>
+                            <label for="primary-email" class="form-label">Primary E-mail</label>
+                            <input type="email" id="primary-email" name="primary_email" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="confirm-primary-email" class="form-label">Confirm Primary E-mail</label>
+                            <input type="email" id="confirm-primary-email" name="confirm_primary_email" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="form-label">Phone Number (Cell)</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" id="address" name="address" class="form-input" required>
+                    </div>
+                    <div class="mt-6">
+                        <label for="address2" class="form-label">Address 2 (Optional)</label>
+                        <input type="text" id="address2" name="address2" class="form-input">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                        <div>
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" id="city" name="city" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="state" class="form-label">State / Province</label>
+                            <input type="text" id="state" name="state" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="zip" class="form-label">Zip / Postal Code</label>
+                            <input type="text" id="zip" name="zip" class="form-input" required>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 2: Student Information -->
+                <section class="form-section">
+                    <h2 class="form-section-title font-serif text-brand-purple">Step 2: Student Information</h2>
+                    <div class="mb-2 text-sm text-gray-600">
+                        You can add multiple students. Click "Add Student" for each child you wish to register.
+                    </div>
+                    <div id="students-container">
+                        <!-- Student cards will be injected here by JavaScript -->
+                    </div>
+                    <button type="button" id="add-student-btn" class="mt-4 inline-flex items-center px-8 py-3 border-2 border-green-700 text-base font-semibold rounded-lg shadow text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all">
+                        <svg class="h-5 w-5 mr-2 -ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        Add Student
+                    </button>
+                </section>
+
+                <!-- Step 3: Policies -->
+                <section class="form-section">
+                    <h2 class="form-section-title font-serif text-brand-purple">Step 3: Policies</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <input id="policy-registration" name="policy_registration" type="checkbox" class="h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500 mt-1" required>
+                            <div class="ml-3 text-sm">
+                                <label for="policy-registration" class="form-label">I have read and agree to the <a href="registration-policies.html" class="text-green-600 hover:underline" target="_blank" rel="noopener">Registration Policies</a>.</label>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <input id="policy-studio" name="policy_studio" type="checkbox" class="h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500 mt-1" required>
+                            <div class="ml-3 text-sm">
+                                <label for="policy-studio" class="form-label">I have read and agree to the <a href="studio-policies.html" class="text-green-600 hover:underline" target="_blank" rel="noopener">Studio Policies</a>.</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 4: Agreements -->
+                <section class="form-section">
+                    <h2 class="form-section-title font-serif text-brand-purple">Step 4: Agreements</h2>
+                    
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Photo Release</h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        I give permission for CAPA to take photos and or videos of CAPA classes, rehearsals and/or performances, including dancers of CAPA in costumes of me or my child while participating in CAPA activities for promotional purposes. Names of students will not be used or disclosed. I understand that I am giving permission to use these photos and/or videos for publishing use, in printed or electronic format.
+                    </p>
+                    
+                    <div class="max-w-xs">
+                         <label for="photo-release-permission" class="form-label">I agree to Parent Portal's photo release policy</label>
+                         <select id="photo-release-permission" name="photo_release_permission" class="form-select" required>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-gray-700 mt-8 mb-2">COVID-19 Acknowledgement</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start p-4 bg-gray-50 rounded-md">
+                            <input id="covid-agree-1" name="covid_agree_1" type="checkbox" class="h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500 mt-1" required>
+                            <div class="ml-3 text-sm">
+                                <label for="covid-agree-1" class="form-label">I acknowledge the contagious nature of the Coronavirus/COVID-19 and that CAPA and many other public health authorities still recommend practicing social distancing.</label>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-4 bg-gray-50 rounded-md">
+                            <input id="covid-agree-2" name="covid_agree_2" type="checkbox" class="h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500 mt-1" required>
+                            <div class="ml-3 text-sm">
+                                <label for="covid-agree-2" class="form-label">I voluntarily seek services provided by CAPA. I acknowledge that I must comply with all set procedures to reduce and prevent the spread while attending classes.</label>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-4 bg-gray-50 rounded-md">
+                            <input id="covid-agree-3" name="covid_agree_3" type="checkbox" class="h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500 mt-1" required>
+                            <div class="ml-3 text-sm">
+                                <label for="covid-agree-3" class="form-label">I further acknowledge that CAPA has put in place preventative measures to help reduce and prevent the spread of the Coronavirus/COVID-19.</label>
+                            </div>
+                        </div>
+                         <div class="flex items-start p-4 bg-gray-50 rounded-md">
+                            <input id="covid-agree-4" name="covid_agree_4" type="checkbox" class="h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500 mt-1" required>
+                            <div class="ml-3 text-sm">
+                                <label for="covid-agree-4" class="form-label">I further acknowledge that CAPA cannot guarantee that I will not become infected with the Coronavirus/ Covid-19. I understand that this is a risk of participating in classes.</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 5: Payment Information -->
+                <section class="form-section">
+                    <h2 class="form-section-title font-serif text-brand-purple">Step 5: Payment Information</h2>
+                    <div>
+                        <label class="form-label">Pay By:</label>
+                        <fieldset class="mt-2">
+                            <div class="flex items-center space-x-8">
+                                <div class="flex items-center">
+                                    <input id="payment-cc" name="payment_method" type="radio" value="cc" class="h-4 w-4 text-green-600 border-gray-300" checked>
+                                    <label for="payment-cc" class="ml-3 block text-sm font-medium text-gray-700">Credit Card</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="payment-bank" name="payment_method" type="radio" value="bank" class="h-4 w-4 text-green-600 border-gray-300">
+                                    <label for="payment-bank" class="ml-3 block text-sm font-medium text-gray-700">Bank Account</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Credit Card Fields -->
+                    <div id="credit-card-info" class="mt-6 space-y-6">
+                        <div>
+                            <label for="cc-number" class="form-label">Card Number</label>
+                            <input type="text" id="cc-number" name="cc_number" class="form-input">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label for="cc-exp-month" class="form-label">Exp. Month</label>
+                                <input type="text" id="cc-exp-month" name="cc_exp_month" placeholder="MM" class="form-input">
+                            </div>
+                            <div>
+                                <label for="cc-exp-year" class="form-label">Exp. Year</label>
+                                <input type="text" id="cc-exp-year" name="cc_exp_year" placeholder="YYYY" class="form-input">
+                            </div>
+                            <div>
+                                <label for="cc-cvc" class="form-label">CVC</label>
+                                <input type="text" id="cc-cvc" name="cc_cvc" class="form-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bank Account Fields -->
+                    <div id="bank-account-info" class="mt-6 space-y-6 hidden">
+                        <div>
+                            <label for="bank-holder-name" class="form-label">Account Holder Name</label>
+                            <input type="text" id="bank-holder-name" name="bank_holder_name" class="form-input">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="bank-routing" class="form-label">Routing Number</label>
+                                <input type="text" id="bank-routing" name="bank_routing" class="form-input">
+                            </div>
+                            <div>
+                                <label for="bank-account" class="form-label">Account Number</label>
+                                <input type="text" id="bank-account" name="bank_account" class="form-input">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Step 6: Final Step -->
+                <section class="form-section">
+                    <h2 class="form-section-title font-serif text-brand-purple">Step 6: Final Step</h2>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <div>
+                            <label for="how-heard" class="form-label">How did you hear about us?</label>
+                            <select id="how-heard" name="how_heard" class="form-select">
+                                <option>Select an option</option>
+                                <option>Friend or Family</option>
+                                <option>Social Media</option>
+                                <option>Google Search</option>
+                                <option>Advertisement</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                         <div class="text-right">
+                             <p class="text-gray-600">Registration Fee: <span class="font-bold text-xl text-gray-800">$50.00</span></p>
+                         </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-200 text-right">
+                         <button type="submit" class="w-full md:w-auto inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-brand-purple hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-purple">
+                            Submit Registration
+                        </button>
+                    </div>
+                </section>
+
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Toggle (copied from index.html)
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Payment Method Toggle
+            const paymentRadios = document.querySelectorAll('input[name="payment_method"]');
+            const ccInfo = document.getElementById('credit-card-info');
+            const bankInfo = document.getElementById('bank-account-info');
+
+            paymentRadios.forEach(radio => {
+                radio.addEventListener('change', (event) => {
+                    if (event.target.value === 'cc') {
+                        ccInfo.classList.remove('hidden');
+                        bankInfo.classList.add('hidden');
+                    } else {
+                        ccInfo.classList.add('hidden');
+                        bankInfo.classList.remove('hidden');
+                    }
+                });
+            });
+
+            // Add Student Functionality
+            const addStudentBtn = document.getElementById('add-student-btn');
+            const studentsContainer = document.getElementById('students-container');
+            let studentCount = 0;
+
+            const addStudentForm = () => {
+                studentCount++;
+                const studentCard = document.createElement('div');
+                studentCard.classList.add('student-card');
+                studentCard.setAttribute('id', `student-${studentCount}`);
+                
+                studentCard.innerHTML = `
+                    <button type="button" aria-label="Remove this student" title="Remove this student" class="absolute top-4 right-4 text-gray-400 hover:text-red-600 remove-student-btn focus:outline-none focus:ring-2 focus:ring-red-400" data-target="student-${studentCount}">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <span class="sr-only">Remove Student</span>
+                    </button>
+                    <h3 class="font-semibold text-lg mb-4">Student ${studentCount}</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="student-first-name-${studentCount}" class="form-label">First Name</label>
+                            <input type="text" id="student-first-name-${studentCount}" name="student_first_name[]" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="student-last-name-${studentCount}" class="form-label">Last Name</label>
+                            <input type="text" id="student-last-name-${studentCount}" name="student_last_name[]" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="student-gender-${studentCount}" class="form-label">Gender</label>
+                            <select id="student-gender-${studentCount}" name="student_gender[]" class="form-select" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer_not_to_say">Prefer not to say</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="student-dob-${studentCount}" class="form-label">Date of Birth</label>
+                            <input type="date" id="student-dob-${studentCount}" name="student_dob[]" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <label class="form-label">Interested Classes</label>
+                        <div class="mt-2 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="class-ballet-${studentCount}" name="student_classes_${studentCount}[]" type="checkbox" value="ballet" class="focus:ring-brand-purple h-4 w-4 text-brand-purple border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="class-ballet-${studentCount}" class="font-medium text-gray-700">Ballet</label>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="class-jazz-${studentCount}" name="student_classes_${studentCount}[]" type="checkbox" value="jazz" class="focus:ring-brand-purple h-4 w-4 text-brand-purple border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="class-jazz-${studentCount}" class="font-medium text-gray-700">Jazz</label>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="class-tap-${studentCount}" name="student_classes_${studentCount}[]" type="checkbox" value="tap" class="focus:ring-brand-purple h-4 w-4 text-brand-purple border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="class-tap-${studentCount}" class="font-medium text-gray-700">Tap</label>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="class-hiphop-${studentCount}" name="student_classes_${studentCount}[]" type="checkbox" value="hiphop" class="focus:ring-brand-purple h-4 w-4 text-brand-purple border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="class-hiphop-${studentCount}" class="font-medium text-gray-700">Hip Hop</label>
+                                </div>
+                            </div>
+                             <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="class-contemporary-${studentCount}" name="student_classes_${studentCount}[]" type="checkbox" value="contemporary" class="focus:ring-brand-purple h-4 w-4 text-brand-purple border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="class-contemporary-${studentCount}" class="font-medium text-gray-700">Contemporary</label>
+                                </div>
+                            </div>
+                             <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="class-acro-${studentCount}" name="student_classes_${studentCount}[]" type="checkbox" value="acro" class="focus:ring-brand-purple h-4 w-4 text-brand-purple border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="class-acro-${studentCount}" class="font-medium text-gray-700">Acro</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                studentsContainer.appendChild(studentCard);
+            };
+            
+            addStudentBtn.addEventListener('click', addStudentForm);
+            
+            // Add one student form by default
+            addStudentForm();
+
+            // Remove Student
+            studentsContainer.addEventListener('click', function(e) {
+                const removeBtn = e.target.closest('.remove-student-btn');
+                if (removeBtn) {
+                    const targetId = removeBtn.dataset.target;
+                    const studentCardToRemove = document.getElementById(targetId);
+                    if (studentCardToRemove) {
+                        studentCardToRemove.remove();
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Footer (copied from index.html for consistency) -->
+    <footer class="bg-brand-dark text-white mt-16">
+        <div class="container mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Clark Academy of Performing Arts. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

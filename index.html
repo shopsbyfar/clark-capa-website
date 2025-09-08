@@ -33,8 +33,35 @@
         }
     </script>
     
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Embedded Styles -->
+    <style>
+        /* Style for the active navigation link */
+        .nav-link.active {
+            color: #4A0072;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #4A0072;
+        }
+
+        /* Hide scrollbar for cleaner look */
+        body {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+
+        body::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, and Opera */
+        }
+    </style>
 
 </head>
 <body class="bg-gray-50 font-sans text-brand-dark">
@@ -46,25 +73,22 @@
                 
                 <!-- Logo -->
                 <a href="#" class="flex items-center space-x-2 nav-button" data-page="home">
-                    <!-- Placeholder for the actual logo image -->
-                     <div class="w-12 h-12 bg-brand-purple rounded-full flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.333 21.333a2.667 2.667 0 100-5.333 2.667 2.667 0 000 5.333zm13.334-8a2.667 2.667 0 100-5.333 2.667 2.667 0 000 5.333zm-6.667-1.333a2.667 2.667 0 100-5.333 2.667 2.667 0 000 5.333zM5.333 8a2.667 2.667 0 100-5.333A2.667 2.667 0 005.333 8z"></path></svg>
-                    </div>
-                    <span class="font-serif text-xl font-bold text-brand-dark">Clark Academy</span>
+                    <img src="https://cdn11.bigcommerce.com/s-6dmaxdsjqa/images/stencil/original/image-manager/capa-icon-master.png?t=1757343850" alt="Clark Academy Icon" class="w-10 h-10 md:w-12 md:h-12 object-contain" style="max-width:48px;max-height:48px;">
+                    <img src="https://cdn11.bigcommerce.com/s-6dmaxdsjqa/images/stencil/original/image-manager/capa-logo.jpg?t=1757343849" alt="Clark Academy Logo" class="h-8 md:h-10 object-contain" style="max-height:40px;">
                 </a>
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8" id="desktop-nav">
                     <a href="#" class="nav-link active text-gray-600 hover:text-brand-purple transition-colors duration-300" data-page="home">Home</a>
                     <a href="#" class="nav-link text-gray-600 hover:text-brand-purple transition-colors duration-300" data-page="about">About Us</a>
-                    <a href="https://your-shop-url.com" target="_blank" class="text-gray-600 hover:text-brand-purple transition-colors duration-300">Shop</a>
+                    <a href="https://shopsbyfar.com/capa/" target="_blank" class="text-gray-600 hover:text-brand-purple transition-colors duration-300">Shop</a>
                     <a href="#" class="nav-link text-gray-600 hover:text-brand-purple transition-colors duration-300" data-page="blog">Blog</a>
                     <a href="#" class="nav-link text-gray-600 hover:text-brand-purple transition-colors duration-300" data-page="contact">Contact Us</a>
                 </nav>
 
                 <div class="flex items-center space-x-4">
                      <!-- Register Button -->
-                    <a href="#" class="hidden sm:inline-block nav-button bg-brand-purple text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors duration-300 shadow" data-page="signup">
+                    <a href="registration.html" class="hidden sm:inline-block nav-button bg-brand-purple text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors duration-300 shadow">
                         Register Now
                     </a>
                     
@@ -83,10 +107,10 @@
             <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#" class="nav-link-mobile active block px-3 py-2 rounded-md text-base font-medium text-brand-purple bg-brand-light" data-page="home">Home</a>
                 <a href="#" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple" data-page="about">About Us</a>
-                <a href="https://your-shop-url.com" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple">Shop</a>
+                <a href="https://shopsbyfar.com/capa/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple">Shop</a>
                 <a href="#" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple" data-page="blog">Blog</a>
                 <a href="#" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-brand-purple" data-page="contact">Contact Us</a>
-                 <a href="#" class="nav-link-mobile block w-full text-left mt-2 px-3 py-2.5 rounded-md text-base font-medium bg-brand-purple text-white hover:bg-opacity-90" data-page="signup">Register Now</a>
+                <a href="registration.html" class="nav-link-mobile block w-full text-left mt-2 px-3 py-2.5 rounded-md text-base font-medium bg-brand-purple text-white hover:bg-opacity-90">Register Now</a>
             </nav>
         </div>
     </header>
@@ -108,7 +132,7 @@
                             Join a family where passion meets purpose. At Clark Academy, we transform potential into performance, nurturing the next generation of world-class dancers under the guidance of a true living legend.
                         </p>
                         <div class="mt-8 flex justify-center gap-4">
-                            <a href="#" data-page="signup" class="nav-button inline-block bg-brand-purple text-white px-8 py-3 rounded-lg text-base font-semibold hover:bg-opacity-90 transition-transform duration-300 hover:scale-105 shadow-lg">
+                            <a href="registration.html" class="nav-button inline-block bg-brand-purple text-white px-8 py-3 rounded-lg text-base font-semibold hover:bg-opacity-90 transition-transform duration-300 hover:scale-105 shadow-lg">
                                 Register Today
                             </a>
                             <a href="#" data-page="about" class="nav-button inline-block bg-white text-brand-purple px-8 py-3 rounded-lg text-base font-semibold hover:bg-gray-100 transition-transform duration-300 hover:scale-105 shadow-lg">
@@ -355,49 +379,7 @@
             </div>
         </section>
 
-        <!-- SIGN UP PAGE SECTION -->
-        <section id="signup" class="page-section hidden">
-            <div class="min-h-screen bg-brand-light flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-                <div class="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-lg">
-                    <div>
-                        <h2 class="mt-6 text-center text-3xl font-serif font-extrabold text-brand-dark">
-                            Create Your Account
-                        </h2>
-                        <p class="mt-2 text-center text-sm text-gray-600">
-                            And start your dance journey with us today!
-                        </p>
-                    </div>
-                    <form class="mt-8 space-y-6" action="#" method="POST">
-                        <input type="hidden" name="remember" value="true">
-                        <div class="rounded-md shadow-sm -space-y-px">
-                            <div class="grid grid-cols-2 gap-4 mb-4">
-                                <div>
-                                    <label for="first-name" class="sr-only">First Name</label>
-                                    <input id="first-name" name="first-name" type="text" required class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-brand-purple focus:border-brand-purple focus:z-10 sm:text-sm" placeholder="First Name">
-                                </div>
-                                <div>
-                                    <label for="last-name" class="sr-only">Last Name</label>
-                                    <input id="last-name" name="last-name" type="text" required class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-brand-purple focus:border-brand-purple focus:z-10 sm:text-sm" placeholder="Last Name">
-                                </div>
-                            </div>
-                            <div>
-                                <label for="email-address" class="sr-only">Email address</label>
-                                <input id="email-address" name="email" type="email" autocomplete="email" required class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-brand-purple focus:border-brand-purple focus:z-10 sm:text-sm" placeholder="Email address">
-                            </div>
-                             <div class="mt-4">
-                                <label for="password" class="sr-only">Password</label>
-                                <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-brand-purple focus:border-brand-purple focus:z-10 sm:text-sm" placeholder="Password">
-                            </div>
-                        </div>
-                        <div>
-                            <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-brand-purple hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-purple">
-                                Create Account
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+
     </main>
 
     <!-- Footer -->
@@ -407,8 +389,75 @@
         </div>
     </footer>
     
-    <!-- External JavaScript -->
-    <script src="script.js"></script>
+    <!-- Embedded JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Page Navigation Logic ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
+            const pages = document.querySelectorAll('.page-section');
+
+            function showPage(pageId) {
+                // Hide all pages
+                pages.forEach(page => {
+                    page.classList.add('hidden');
+                });
+                
+                // Show the target page
+                const targetPage = document.getElementById(pageId);
+                if (targetPage) {
+                    targetPage.classList.remove('hidden');
+                    window.scrollTo(0, 0); // Scroll to top on page change
+                }
+
+                // Update active state for desktop links
+                navLinks.forEach(link => {
+                    if (link.dataset.page === pageId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+
+                // Update active state for mobile links
+                mobileNavLinks.forEach(link => {
+                    if (link.dataset.page === pageId) {
+                        link.classList.add('active', 'bg-brand-light', 'text-brand-purple');
+                        link.classList.remove('text-gray-600', 'hover:bg-gray-100');
+                    } else {
+                        link.classList.remove('active', 'bg-brand-light', 'text-brand-purple');
+                        link.classList.add('text-gray-600', 'hover:bg-gray-100');
+                    }
+                });
+
+                // Close mobile menu on navigation
+                mobileMenu.classList.add('hidden');
+            }
+
+            // Only add navigation for internal sections (not registration)
+            const allNavElements = [...navLinks, ...mobileNavLinks];
+            allNavElements.forEach(element => {
+                if (element.dataset.page) {
+                    element.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const pageId = element.dataset.page;
+                        showPage(pageId);
+                    });
+                }
+            });
+
+            // Set the initial page to 'home'
+            showPage('home');
+        });
+    </script>
 
 </body>
 </html>
