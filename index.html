@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clark Academy of Performing Arts</title>
     
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
+    <!-- Custom CSS and Tailwind Configuration -->
     <style type="text/tailwindcss">
         @layer base {
             body {
@@ -66,15 +69,22 @@
 </head>
 <body class="bg-capa-light-accent">
 
+    <!-- 
+    ===================================================================
+    HEADER & NAVIGATION
+    ===================================================================
+    -->
     <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-32">
+                <!-- Logo -->
                 <div class="flex-shrink-0 p-2">
                     <a href="#home" class="nav-link">
                         <img class="h-28 max-h-32 w-auto object-contain" src="images/CAPA-Logo.jpg" alt="Clark Academy of Performing Arts Logo">
                     </a>
                 </div>
                 
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="nav-link text-gray-600 hover:text-capa-purple transition duration-300">Home</a>
                     <a href="#about" class="nav-link text-gray-600 hover:text-capa-purple transition duration-300">About Us</a>
@@ -83,10 +93,12 @@
                     <a href="#contact" class="nav-link text-gray-600 hover:text-capa-purple transition duration-300">Contact Us</a>
                 </div>
                 
+                <!-- Desktop Register Button -->
                 <div class="hidden md:block">
-                    <a href="#signup" class="nav-link bg-gradient-to-r from-capa-purple to-capa-dark text-white px-8 py-3 rounded-full border-2 border-white shadow-lg text-lg font-extrabold tracking-wide transition duration-300 hover:from-capa-dark hover:to-capa-purple hover:scale-105 focus:outline-none focus:ring-2 focus:ring-capa-purple">Register Now</a>
+                    <a href="#signup" class="nav-link bg-gradient-to-r from-capa-purple to-[#6a4480] text-white px-8 py-3 rounded-full border-2 border-white shadow-lg text-lg font-extrabold tracking-wide transition duration-300 hover:from-[#6a4480] hover:to-capa-purple hover:scale-105 focus:outline-none focus:ring-2 focus:ring-capa-purple">Register Now</a>
                 </div>
 
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" class="text-capa-dark p-2">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -95,6 +107,7 @@
             </div>
         </nav>
         
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-capa-purple hover:bg-gray-50">Home</a>
@@ -107,8 +120,19 @@
         </div>
     </header>
 
+    <!-- 
+    ===================================================================
+    MAIN CONTENT AREA
+    ===================================================================
+    -->
     <main>
+        <!-- 
+        ===============================================================
+        HOME PAGE SECTION
+        ===============================================================
+        -->
         <section id="home" class="page-section active">
+            <!-- Hero Section -->
             <div class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
                 <div class="absolute inset-0">
                      <img class="w-full h-full object-cover" src="images/hero-dancer.jpg" alt="A dancer leaping gracefully">
@@ -118,11 +142,12 @@
                     <h1 class="text-5xl md:text-8xl font-black text-capa-purple tracking-tighter">Find Your Rhythm</h1>
                     <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-capa-dark font-semibold">Join a community where passion meets purpose, guided by world-renowned artist and mentor, Matthew Clark.</p>
                     <div class="mt-8">
-                        <a href="#signup" class="nav-link inline-block bg-capa-purple text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-opacity-80 transition duration-300 transform hover:scale-105">Explore Classes</a>
+                        <a href="#signup" class="nav-link inline-block bg-gradient-to-r from-capa-purple to-[#6a4480] text-white px-10 py-4 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:from-[#6a4480] hover:to-capa-purple">Register Now</a>
                     </div>
                 </div>
             </div>
 
+            <!-- Benefits Section -->
             <div class="py-20 sm:py-32 bg-capa-light-accent overflow-hidden">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-16">
@@ -130,6 +155,7 @@
                         <p class="mt-4 text-lg text-gray-600">Dance is more than movement. It's a journey of growth.</p>
                     </div>
 
+                    <!-- Feature 1 -->
                     <div class="fade-in-section grid md:grid-cols-2 gap-12 items-center mb-24">
                         <div class="pr-6">
                              <h3 class="text-3xl font-bold text-capa-dark mb-4">Build Unshakable Confidence</h3>
@@ -140,6 +166,7 @@
                         </div>
                     </div>
 
+                    <!-- Feature 2 -->
                     <div class="fade-in-section grid md:grid-cols-2 gap-12 items-center">
                         <div class="relative h-96 md:order-2">
                              <img src="images/group-photo.jpg" alt="Ballet shoes" class="w-full h-full object-cover rounded-lg shadow-xl">
@@ -152,6 +179,7 @@
                 </div>
             </div>
 
+            <!-- Testimonials Section -->
             <div class="bg-white py-20 sm:py-32">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 class="text-4xl sm:text-5xl font-bold text-capa-dark">From Our Dance Family</h2>
@@ -166,6 +194,11 @@
             </div>
         </section>
 
+        <!-- 
+        ===============================================================
+        ABOUT US PAGE SECTION
+        ===============================================================
+        -->
         <section id="about" class="page-section">
             <div class="bg-white py-20 sm:py-32 overflow-hidden">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,6 +234,11 @@
             </div>
         </section>
 
+        <!-- 
+        ===============================================================
+        BLOG PAGE SECTION
+        ===============================================================
+        -->
         <section id="blog" class="page-section">
             <div class="bg-capa-light-accent py-20 sm:py-32">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,6 +247,7 @@
                         <p class="mt-4 text-lg text-gray-600">Tips, stories, and inspiration from our dance family.</p>
                     </div>
                     <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+                        <!-- Blog Post 1 -->
                         <div class="fade-in-section bg-white rounded-lg shadow-lg overflow-hidden group">
                              <div class="overflow-hidden">
                                  <img class="h-64 w-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/blog-pirouette.jpg" alt="Dancer tying ballet shoe">
@@ -217,9 +256,10 @@
                                 <p class="text-sm text-gray-500 mb-2">By Matthew Clark - September 5, 2025</p>
                                 <h3 class="text-2xl font-bold text-capa-dark">5 Tips for a Perfect Pirouette</h3>
                                 <p class="mt-3 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <a href="#" class="mt-4 inline-block text-capa-purple font-bold hover:underline">Read More →</a>
+                                <a href="#" class="mt-4 inline-block text-capa-purple font-bold hover:underline">Read More &rarr;</a>
                             </div>
                         </div>
+                        <!-- Blog Post 2 -->
                         <div class="fade-in-section bg-white rounded-lg shadow-lg overflow-hidden group">
                              <div class="overflow-hidden">
                                  <img class="h-64 w-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/blog-costumes.jpg" alt="Whimsical image of colorful dance costumes">
@@ -228,9 +268,10 @@
                                 <p class="text-sm text-gray-500 mb-2">By The CAPA Team - August 28, 2025</p>
                                 <h3 class="text-2xl font-bold text-capa-dark">Recital Costume Secrets & Life Hacks</h3>
                                 <p class="mt-3 text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <a href="#" class="mt-4 inline-block text-capa-purple font-bold hover:underline">Read More →</a>
+                                <a href="#" class="mt-4 inline-block text-capa-purple font-bold hover:underline">Read More &rarr;</a>
                             </div>
                         </div>
+                        <!-- Blog Post 3 -->
                         <div class="fade-in-section bg-white rounded-lg shadow-lg overflow-hidden group">
                              <div class="overflow-hidden">
                                  <img class="h-64 w-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/blog-first-class.jpg" alt="Dancers in a studio">
@@ -239,7 +280,7 @@
                                 <p class="text-sm text-gray-500 mb-2">By A CAPA Parent - August 15, 2025</p>
                                 <h3 class="text-2xl font-bold text-capa-dark">The Joy of a First Dance Class</h3>
                                 <p class="mt-3 text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                <a href="#" class="mt-4 inline-block text-capa-purple font-bold hover:underline">Read More →</a>
+                                <a href="#" class="mt-4 inline-block text-capa-purple font-bold hover:underline">Read More &rarr;</a>
                             </div>
                         </div>
                     </div>
@@ -247,45 +288,33 @@
             </div>
         </section>
         
+        <!-- 
+        ===============================================================
+        SIGN UP PAGE SECTION
+        ===============================================================
+        -->
         <section id="signup" class="page-section">
             <div class="bg-white py-20 sm:py-32">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid lg:grid-cols-2 gap-16 items-center">
                         <div class="text-center lg:text-left">
                             <h2 class="text-4xl sm:text-5xl font-bold text-capa-dark">Begin Your Journey</h2>
-                            <p class="mt-4 text-lg text-gray-600">Create an account to enroll in classes, sign up for workshops, and become part of our incredible dance family. We can't wait to welcome you.</p>
+                            <p class="mt-4 text-lg text-gray-600">Fill out the form to enroll in classes, sign up for workshops, and become part of our incredible dance family. We can't wait to welcome you.</p>
                              <img src="images/signup-warmup.jpg" class="mt-8 rounded-lg shadow-xl w-full object-cover h-64 lg:h-auto" alt="Dancers warming up in the studio">
                         </div>
-                        <div class="bg-capa-light-accent p-8 rounded-lg shadow-2xl">
-                            <form action="#" method="POST" class="space-y-6">
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    <div>
-                                        <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
-                                        <input type="text" name="first-name" id="first-name" class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-capa-purple focus:border-capa-purple">
-                                    </div>
-                                    <div>
-                                        <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
-                                        <input type="text" name="last-name" id="last-name" class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-capa-purple focus:border-capa-purple">
-                                    </div>
-                                </div>
-                                <div>
-                                    <label for="email-signup" class="block text-sm font-medium text-gray-700">Email Address</label>
-                                    <input type="email" name="email-signup" id="email-signup" autocomplete="email" class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-capa-purple focus:border-capa-purple">
-                                </div>
-                                <div>
-                                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                                    <input type="password" name="password" id="password" autocomplete="current-password" class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-capa-purple focus:border-capa-purple">
-                                </div>
-                                <div>
-                                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-lg font-bold text-white bg-capa-purple hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-capa-purple transition duration-300">Create Account</button>
-                                </div>
-                            </form>
+                        <div class="bg-white rounded-lg shadow-2xl overflow-hidden">
+                           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0EFdNjmHYFHyuAyTL-hjiLCppxo341tOwBLtFF1ukYrlALA/viewform?embedded=true" width="100%" height="2292" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- 
+        ===============================================================
+        CONTACT US PAGE SECTION
+        ===============================================================
+        -->
         <section id="contact" class="page-section">
             <div class="bg-capa-light-accent py-20 sm:py-32">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -294,6 +323,7 @@
                         <p class="mt-4 text-lg text-gray-600">We'd love to hear from you! Send us a message or stop by the studio.</p>
                     </div>
                     <div class="mt-16 grid lg:grid-cols-2 gap-12 items-start">
+                        <!-- Contact Info -->
                         <div class="bg-white p-8 rounded-lg shadow-xl space-y-6">
                             <h3 class="text-2xl font-bold text-capa-dark">Our Studio</h3>
                             <div class="flex items-start space-x-4">
@@ -321,8 +351,10 @@
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2922.039603348651!2d-78.881452684526!3d42.93092097915266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d36d8b5c5e8b3b%3A0x8f7b7b7b7b7b7b7b!2s463%20Amherst%20St%2C%20Buffalo%2C%20NY%2014207!5e0!3m2!1sen!2sus!4v1662581234567!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
+                        <!-- Contact Form -->
                         <div class="bg-white p-8 rounded-lg shadow-xl">
                             <h3 class="text-2xl font-bold text-capa-dark mb-6">Send a Message</h3>
+                            <!-- Google Form Embedded Here -->
                             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7nJaRAnq1RGW7mZjX10V5C6aUAYNyox7pcwyQhW8flVYPfw/viewform?embedded=true" width="100%" height="824" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                         </div>
                     </div>
@@ -331,6 +363,11 @@
         </section>
     </main>
 
+    <!-- 
+    ===================================================================
+    JAVASCRIPT LOGIC
+    ===================================================================
+    -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // --- Mobile Menu Toggle ---
@@ -405,4 +442,6 @@
 
 </body>
 </html>
+
+
 
