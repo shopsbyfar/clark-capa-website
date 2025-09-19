@@ -48,6 +48,20 @@
             overflow-y: auto; /* Ensures vertical scrolling is enabled */
         }
     </style>
+    
+    <style>
+        @media print {
+            @page {
+                size: landscape;
+                margin: 0.5in;
+            }
+            body {
+                /* Ensures background colors and images are printed */
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
 
     <script>
       // Custom Tailwind theme configuration
@@ -162,7 +176,7 @@
                     <h2 class="text-4xl sm:text-5xl font-bold text-capa-dark">From Our Dance Family</h2>
                     <div class="mt-12 max-w-3xl mx-auto">
                         <div class="bg-capa-light-accent p-10 rounded-lg shadow-lg relative">
-                             <div class="absolute top-0 left-0 -mt-4 -ml-4 text-8xl font-serif text-capa-purple/20">“</div>
+                            <div class="absolute top-0 left-0 -mt-4 -ml-4 text-8xl font-serif text-capa-purple/20">“</div>
                             <p class="text-xl md:text-2xl italic text-capa-dark">"Matthew literally changed my life... he coached me into a well adaptable dancer and always had the time of day for me. I am now a dance teacher in New Zealand thanks to him!"</p>
                             <p class="mt-6 font-bold text-capa-purple tracking-wider">- STACEY WITT</p>
                         </div>
@@ -193,11 +207,11 @@
                     </div>
                     
                     <div class="fade-in-section mt-24 space-y-12">
-                         <div>
+                          <div>
                             <h4 class="text-3xl font-bold text-capa-dark mb-4 text-center">The Architect of Champions</h4>
                             <p class="max-w-3xl mx-auto text-center text-lg text-gray-600">While his personal accomplishments are formidable, his proven ability to cultivate success in others is the core promise of a dance studio. As the coach and choreographer for the US and Canadian National Teams, his students have secured an astounding 21 World Tap Dance Championship titles. This incredible record is undeniable proof of his ability to produce results at the highest level of international competition.</p>
                         </div>
-                         <div>
+                          <div>
                             <h4 class="text-3xl font-bold text-capa-dark mb-4 text-center">A "Dance Home" Philosophy</h4>
                             <p class="max-w-3xl mx-auto text-center text-lg text-gray-600">Beyond trophies, Matthew's teaching philosophy is focused on mentorship and personal growth. He creates a nurturing "dance home" where students can thrive, using dance as a vehicle to build confidence and unlock a child's potential. He is committed to developing the whole person—a crucial differentiator from studios that may prioritize technical proficiency above all else.</p>
                         </div>
@@ -206,176 +220,171 @@
             </div>
         </section>
 
-        <!-- SCHEDULE SECTION START -->
         <section id="schedule" class="page-section">
             <div class="bg-capa-light-accent py-20 sm:py-32">
-                <div class="container mx-auto px-4 py-8 md:py-12">
-                    <!-- Header Section -->
+                <div class="container mx-auto px-4 py-8 md:py-12 relative">
+                    
+                    <img src="https://cdn11.bigcommerce.com/s-6dmaxdsjqa/images/stencil/original/image-manager/capa-logo.jpg?t=1757343849" alt="CAPA Logo" class="absolute top-8 left-4 w-24 md:w-32 h-auto">
+
                     <header class="text-center mb-10 md:mb-16">
                         <h2 class="text-4xl sm:text-5xl font-bold text-capa-dark">Class Schedule</h2>
+                        <p class="text-red-600 underline font-bold mt-4">This is a tentative schedule and will be changing soon.</p>
                         <p class="text-lg md:text-xl text-gray-600 mt-2">2025 - 2026 Dance Season</p>
                     </header>
                     
-                    <!-- Main Schedule Grid -->
                     <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 md:gap-8">
             
-                        <!-- Monday Column -->
                         <div class="space-y-4">
                             <h3 class="text-2xl font-bold text-center bg-blue-100 text-blue-800 rounded-lg py-3 shadow-md">Monday</h3>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-blue-800">4:45 - 5:45 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Majorette (VDHS)</h4>
+                                <p class="font-semibold text-lg text-blue-800">4:45 - 5:45 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Majorette (VDHS)</h4>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-blue-800">5:45 - 6:30 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Ballet 1</h4>
-                                <p class="text-sm text-gray-500">Ages 6-9</p>
+                                <p class="font-semibold text-lg text-blue-800">5:45 - 6:30 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Ballet 1</h4>
+                                <p class="text-base text-gray-500">Ages 6-9</p>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-blue-800">6:30 - 7:30 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Ballet 2</h4>
-                                <p class="text-sm text-gray-500">Ages 10-13</p>
+                                <p class="font-semibold text-lg text-blue-800">6:30 - 7:30 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Ballet 2</h4>
+                                <p class="text-base text-gray-500">Ages 10-13</p>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-blue-800">7:30 - 8:30 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Ballet 3</h4>
-                                <p class="text-sm text-gray-500">Int/Adv</p>
+                                <p class="font-semibold text-lg text-blue-800">7:30 - 8:30 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Ballet 3</h4>
+                                <p class="text-base text-gray-500">Int/Adv</p>
                             </div>
                              <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-blue-800">8:30 - 9:15 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Pointe</h4>
-                                <p class="text-sm text-gray-500">By Permission</p>
+                                <p class="font-semibold text-lg text-blue-800">8:30 - 9:15 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Pointe</h4>
+                                <p class="text-base text-gray-500">By Permission</p>
                             </div>
                         </div>
             
-                        <!-- Tuesday Column -->
                         <div class="space-y-4">
                             <h3 class="text-2xl font-bold text-center bg-green-100 text-green-800 rounded-lg py-3 shadow-md">Tuesday</h3>
                              <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-green-800">4:30 - 5:15 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Tap 2</h4>
+                                <p class="font-semibold text-lg text-green-800">4:30 - 5:15 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Tap 2</h4>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-green-800">5:15 - 6:00 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Tap Jazz 2</h4>
+                                <p class="font-semibold text-lg text-green-800">5:15 - 6:00 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Tap Jazz 2</h4>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-green-800">6:15 - 7:00 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Hip Hop 1</h4>
+                                <p class="font-semibold text-lg text-green-800">6:15 - 7:00 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Hip Hop 1</h4>
                             </div>
                              <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-green-800">7:00 - 8:00 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Teen/Adult Hip Hop</h4>
+                                <p class="font-semibold text-lg text-green-800">7:00 - 8:00 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Teen/Adult Hip Hop</h4>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-green-800">8:00 - 9:00 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Teen/Adult Tap 1</h4>
+                                <p class="font-semibold text-lg text-green-800">8:00 - 9:00 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Teen/Adult Tap 1</h4>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-green-800">8:30 - 9:30 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Hip Hop 4</h4>
-                                <p class="text-sm text-gray-500">Teen/Adult</p>
+                                <p class="font-semibold text-lg text-green-800">8:30 - 9:30 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Hip Hop 4</h4>
+                                <p class="text-base text-gray-500">Teen/Adult</p>
                             </div>
                         </div>
             
-                        <!-- Wednesday Column -->
                         <div class="space-y-4">
                             <h3 class="text-2xl font-bold text-center bg-yellow-100 text-yellow-800 rounded-lg py-3 shadow-md">Wednesday</h3>
                              <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-yellow-800">4:30 - 5:15 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Intro to Dance</h4>
-                                <p class="text-sm text-gray-500">Preschool</p>
+                                <p class="font-semibold text-lg text-yellow-800">4:30 - 5:15 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Intro to Dance</h4>
+                                <p class="text-base text-gray-500">Preschool</p>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-yellow-800">5:15 - 6:15 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Ballet 3</h4>
+                                <p class="font-semibold text-lg text-yellow-800">5:15 - 6:15 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Ballet 3</h4>
                             </div>
                              <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-yellow-800">6:15 - 7:15 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Int/Adv Tap</h4>
-                                <p class="text-sm text-gray-500">Open</p>
+                                <p class="font-semibold text-lg text-yellow-800">6:15 - 7:15 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Int/Adv Tap</h4>
+                                <p class="text-base text-gray-500">Open</p>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-yellow-800">7:15 - 8:30 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Int/Adv Contemporary Jazz</h4>
+                                <p class="font-semibold text-lg text-yellow-800">7:15 - 8:30 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Int/Adv Contemporary Jazz</h4>
                             </div>
                         </div>
             
-                        <!-- Thursday Column -->
                         <div class="space-y-4">
                             <h3 class="text-2xl font-bold text-center bg-pink-100 text-pink-800 rounded-lg py-3 shadow-md">Thursday</h3>
                              <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-pink-800">4:30 - 4:45 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Kidz Hip Hop</h4>
+                                <p class="font-semibold text-lg text-pink-800">4:30 - 4:45 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Kidz Hip Hop</h4>
                             </div>
                              <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-pink-800">5:00 - 7:15 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Majorette (VDHS)</h4>
+                                <p class="font-semibold text-lg text-pink-800">5:00 - 7:15 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Majorette (VDHS)</h4>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-pink-800">5:45 - 6:30 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Kidz Hip-Hop</h4>
-                                <p class="text-sm text-gray-500">Ages 8-12</p>
+                                <p class="font-semibold text-lg text-pink-800">5:45 - 6:30 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Kidz Hip-Hop</h4>
+                                <p class="text-base text-gray-500">Ages 8-12</p>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-pink-800">6:30 - 7:30 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Pre-Teen Jazz</h4>
+                                <p class="font-semibold text-lg text-pink-800">6:30 - 7:30 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Pre-Teen Jazz</h4>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-pink-800">7:30 - 8:30 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Line Dance</h4>
+                                <p class="font-semibold text-lg text-pink-800">7:30 - 8:30 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Line Dance</h4>
                             </div>
                         </div>
             
-                        <!-- Friday Column -->
                         <div class="space-y-4">
                             <h3 class="text-2xl font-bold text-center bg-teal-100 text-teal-800 rounded-lg py-3 shadow-md">Friday</h3>
                             <div class="bg-white p-4 rounded-lg shadow-lg text-center flex flex-col justify-center items-center">
-                                <h4 class="text-lg font-bold text-capa-dark">By Appointment</h4>
-                                <p class="text-sm text-gray-500 mt-2">Private Consultations<br>Choreography<br>Theatre Rehearsals<br>Company Classes</p>
+                                <h4 class="text-xl font-bold text-capa-dark">By Appointment</h4>
+                                <p class="text-base text-gray-500 mt-2">Private Consultations<br>Choreography<br>Theatre Rehearsals<br>Company Classes</p>
                             </div>
                         </div>
             
-                        <!-- Saturday Column -->
                         <div class="space-y-4">
                             <h3 class="text-2xl font-bold text-center bg-indigo-100 text-indigo-800 rounded-lg py-3 shadow-md">Saturday</h3>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-indigo-800">10:15 - 10:45 AM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Diaper Dance</h4>
+                                <p class="font-semibold text-lg text-indigo-800">10:15 - 10:45 AM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Diaper Dance</h4>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-indigo-800">10:45 - 11:30 AM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Primary Ballet</h4>
-                                <p class="text-sm text-gray-500">Ages 4-6</p>
+                                <p class="font-semibold text-lg text-indigo-800">10:45 - 11:30 AM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Primary Ballet</h4>
+                                <p class="text-base text-gray-500">Ages 4-6</p>
                             </div>
                              <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-indigo-800">10:45 - 11:45 AM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Acro 2</h4>
+                                <p class="font-semibold text-lg text-indigo-800">10:45 - 11:45 AM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Acro 2</h4>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-indigo-800">11:30 AM - 12:15 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Tiny Tappers</h4>
-                                <p class="text-sm text-gray-500">Ages 3-4</p>
+                                <p class="font-semibold text-lg text-indigo-800">11:30 AM - 12:15 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Tiny Tappers</h4>
+                                <p class="text-base text-gray-500">Ages 3-4</p>
                             </div>
                              <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-indigo-800">11:30 AM - 12:30 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Acro 1</h4>
-                                 <p class="text-sm text-gray-500">Beginner</p>
+                                <p class="font-semibold text-lg text-indigo-800">11:30 AM - 12:30 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Acro 1</h4>
+                                 <p class="text-base text-gray-500">Beginner</p>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-indigo-800">12:15 - 1:15 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Combo 1</h4>
-                                <p class="text-sm text-gray-500">Ages 5-7</p>
+                                <p class="font-semibold text-lg text-indigo-800">12:15 - 1:15 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Combo 1</h4>
+                                <p class="text-base text-gray-500">Ages 5-7</p>
                             </div>
                             <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-indigo-800">1:15 - 2:15 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Combo 2</h4>
-                                <p class="text-sm text-gray-500">Ages 8-10</p>
+                                <p class="font-semibold text-lg text-indigo-800">1:15 - 2:15 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Combo 2</h4>
+                                <p class="text-base text-gray-500">Ages 8-10</p>
                             </div>
                              <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <p class="font-semibold text-indigo-800">Until 5:00 PM</p>
-                                <h4 class="text-lg font-bold mt-1 text-capa-dark">Private Lessons</h4>
-                                <p class="text-sm text-gray-500">Solos, Duets, Trios</p>
+                                <p class="font-semibold text-lg text-indigo-800">Until 5:00 PM</p>
+                                <h4 class="text-xl font-bold mt-1 text-capa-dark">Private Lessons</h4>
+                                <p class="text-base text-gray-500">Solos, Duets, Trios</p>
                             </div>
                         </div>
             
@@ -384,19 +393,40 @@
                 </div>
             </div>
         </section>
-        <!-- SCHEDULE SECTION END -->
-
         <section id="signup" class="page-section">
-            <div class="bg-white py-20 sm:py-32">
+            <div class="bg-capa-light-accent py-20 sm:py-32">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        <div class="text-center lg:text-left">
-                            <h2 class="text-4xl sm:text-5xl font-bold text-capa-dark">Begin Your Journey</h2>
-                            <p class="mt-4 text-lg text-gray-600">Fill out the form to enroll in classes, sign up for workshops, and become part of our incredible dance family. We can't wait to welcome you.</p>
-                             <img src="images/signup-warmup.jpg" class="mt-8 rounded-lg shadow-xl w-full object-cover h-64 lg:h-auto" alt="Dancers warming up in the studio">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-4xl sm:text-5xl font-bold text-capa-dark">Begin Your Journey</h2>
+                        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600 leading-relaxed">By registering, you're not just signing up for dance classes—you're joining a supportive family dedicated to artistry, growth, and passion. We can't wait to welcome you.</p>
+                        
+                        <div class="mt-8 inline-block text-left">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-gray-700">Expert instruction from a world champion.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-gray-700">A nurturing and positive environment.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-gray-700">Opportunities to build lifelong friendships.</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="bg-white rounded-lg shadow-2xl iframe-container">
-                           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0EFdNjmHYFHyuAyTL-hjiLCppxo341tOwBLtFF1ukYrlALA/viewform?embedded=true" width="100%" height="2292" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+                        <div class="mt-12 bg-white rounded-lg shadow-2xl p-2">
+                            <div class="iframe-container rounded-md overflow-hidden">
+                                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0EFdNjmHYFHyuAyTL-hjiLCppxo341tOwBLtFF1ukYrlALA/viewform?embedded=true" width="100%" height="2292" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -435,7 +465,7 @@
                                  </div>
                             </div>
                             <div class="mt-6 rounded-lg overflow-hidden">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2922.36195861427!2d-78.8878238845267!3d42.92348397915301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d36d402283738b%3A0xe5a31562b32f4a3!2s463%20Amherst%20St%2C%20Buffalo%2C%20NY%2014207!5e0!3m2!1sen!2sus!4v1662919104883!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe src="http://googleusercontent.com/maps.google.com/4" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                         <div class="bg-white p-8 rounded-lg shadow-xl iframe-container">
@@ -522,4 +552,3 @@
 
 </body>
 </html>
-
